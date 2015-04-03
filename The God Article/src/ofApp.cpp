@@ -287,7 +287,7 @@ void ofApp::keyPressed(int key){
         if (meshScale > 0.1) {
             meshScale-=0.1;
             oscObject->meshScale = meshScale;
-            waveObject->meshScale = meshScale;
+//            waveObject->meshScale = meshScale;
         }
         updateVisCount();
     }
@@ -295,7 +295,7 @@ void ofApp::keyPressed(int key){
     if (key==358) { // right arrow
         meshScale+=0.1;
         oscObject->meshScale = meshScale;
-        waveObject->meshScale = meshScale;
+//        waveObject->meshScale = meshScale;
         updateVisCount();
     }
     
