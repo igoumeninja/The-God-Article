@@ -6,6 +6,10 @@
 #include "ofxXmlSettings.h"
 #include "oscHandler.h"
 
+#include "ofxSimpleSerial.h"
+#include "ofUtils.h"
+
+
 #define NUM_CHANNELS 1
 #define SAMPLE_RATE 44100
 #define STREAM_BUFFER_SIZE 1024
@@ -63,5 +67,10 @@ class ofApp : public ofBaseApp{
         float meshScale;
     
         bool bWaveform, bFreq, bAmp, bBreath, bFingers;
+    
+        //Serial
+        ofxSimpleSerial	serial;
+        string		message, printMsg;
+        void		onNewMessage(string & message);
 
 };

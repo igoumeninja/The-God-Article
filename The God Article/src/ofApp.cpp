@@ -37,6 +37,30 @@ void ofApp::setup(){
     playPosition = 0;
     updateVisCount();
     
+    //Serial
+    serial.listDevices();
+    vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
+    int baud = 9600;
+    serial.setup(1, baud); //open the first device
+    
+    //serial.startContinuousRead();
+    ofAddListener(serial.NEW_MESSAGE,this,&ofApp::onNewMessage);
+    if( serial.setup() ){
+        printf("serial is setup!");
+    }
+    //message = "";
+    
+    
+}
+void ofApp::onNewMessage(string & message) {
+//    ofxOscMessage m;
+//    m.setAddress("/arduinoData");
+//    m.addStringArg(message);
+//    sender.sendMessage(m);
+//    printMsg = message;
+    cout << "onNewMessage, message: " << message << "\n";
+//    ofSetColor(20,20,20, 255);
+    
 }
 
 //--------------------------------------------------------------

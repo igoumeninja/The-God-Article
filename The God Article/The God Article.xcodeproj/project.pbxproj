@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0215B0E11ACEFBD8009619B4 /* ofxSimpleSerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0215B0DF1ACEFBD8009619B4 /* ofxSimpleSerial.cpp */; };
 		0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */; };
 		28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
@@ -82,6 +83,8 @@
 /* Begin PBXFileReference section */
 		00D6D32B84B099226431108C /* ofxOsc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOsc.h; path = ../../../addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
 		01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		0215B0DF1ACEFBD8009619B4 /* ofxSimpleSerial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSimpleSerial.cpp; sourceTree = "<group>"; };
+		0215B0E01ACEFBD8009619B4 /* ofxSimpleSerial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSimpleSerial.h; sourceTree = "<group>"; };
 		029684CF678F70F6D3537A29 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscOutboundPacketStream.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h; sourceTree = SOURCE_ROOT; };
 		0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../../../addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
 		196FF9A8708E94B08360B5C4 /* ofxWaveHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxWaveHandler.cpp; path = ../../../addons/ofxWaveHandler/src/ofxWaveHandler.cpp; sourceTree = SOURCE_ROOT; };
@@ -178,6 +181,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0215B0DD1ACEFBD8009619B4 /* ofxSimpleSerial */ = {
+			isa = PBXGroup;
+			children = (
+				0215B0DE1ACEFBD8009619B4 /* src */,
+			);
+			name = ofxSimpleSerial;
+			sourceTree = "<group>";
+		};
+		0215B0DE1ACEFBD8009619B4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0215B0DF1ACEFBD8009619B4 /* ofxSimpleSerial.cpp */,
+				0215B0E01ACEFBD8009619B4 /* ofxSimpleSerial.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxSimpleSerial/src;
+			sourceTree = "<group>";
+		};
 		0B3C8F3A44DB2483ECF7D186 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +321,7 @@
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
 				DB0BE7D2B7AE0019CEFA475C /* ofxWaveHandler */,
+				0215B0DD1ACEFBD8009619B4 /* ofxSimpleSerial */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -573,6 +595,7 @@
 				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
 				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
 				CFF427105E6E3D6D916B1C65 /* ofxWaveHandler.cpp in Sources */,
+				0215B0E11ACEFBD8009619B4 /* ofxSimpleSerial.cpp in Sources */,
 				8251CF6419210A11004DD2C0 /* oscHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +806,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 				);
 				PRODUCT_NAME = "The God ArticleDebug";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -868,6 +892,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 				);
 				PRODUCT_NAME = "The God Article";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
