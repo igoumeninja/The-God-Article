@@ -47,7 +47,7 @@ class ofApp : public ofBaseApp{
         AppConfig               config;
     
         int	currentSlot, playPosition;
-        bool isRecording, isPlaying, isListening, isLive;
+        bool isRecording, isPlaying, isListening, isLive, isStartUp;
     
         int view;
         ofTrueTypeFont font;

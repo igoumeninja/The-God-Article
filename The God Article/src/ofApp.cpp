@@ -74,6 +74,11 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    if (isStartUp) {
+        ofBackground(255, 255, 255);
+    } else {
+    
     ofBackground(31,33,43);
 
     // Draw OSC Visualisers
@@ -205,6 +210,7 @@ void ofApp::draw(){
 	font.drawString("Q-W to select linear or alternative visualisations",x,60);
 	font.drawString("L to toggle live data visualisers",x,80);
     ofPopMatrix();
+    }
 
 }
 
@@ -342,6 +348,12 @@ void ofApp::keyPressed(int key){
         bFingers = !bFingers;
         updateVisCount();
     }
+    
+    if (key=='w') {
+        isStartUp = !isStartUp;
+    }
+    
+    
 
 }
 
